@@ -7,3 +7,11 @@
         </div>
     </div>
 </div>
+<p appBasicHighlight>Style me with basic highlight directive</p>
+<p appBetterHighlight [highlightColor]="'red'">Style me with better highlight directive</p>
+<p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">Style me with better highlight directive</p>
+
+<button class="btn btn-primary" (click)="testStrcutural()">Test structural Directive</button>
+<p *ngIf="show">I am shown with Angular Structural Directive</p>
+
+<p *appUnless="show">I am shown with custom structural directive</p>
