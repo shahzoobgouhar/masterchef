@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'masterchef';
-  feature: string = 'recipes';
-  loadSelectedFeature(event) {
-    this.feature = event;
-  }
 }

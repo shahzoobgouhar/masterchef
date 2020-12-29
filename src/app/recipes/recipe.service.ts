@@ -29,8 +29,12 @@ export class RecipeService {
     public selectedRecipe = new EventEmitter<Recipe>()
 
     constructor(private shoppingListService: ShoppingListService){}
-    getRecipe() {
+    getRecipes() {
         return this.recipes.slice();
+    }
+
+    getRecipe(index: number) {
+        return this.recipes[index];
     }
 
     addIngredientsToShoppingList(ingrdeients: Ingredient[]) {
