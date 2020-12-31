@@ -1,10 +1,10 @@
-import { Directive, ElementRef, HostBinding, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, HostBinding } from '@angular/core';
 
 @Directive({
-    selector: '[appDropdown]'
+  selector: '[appDropdown]'
 })
 export class DropdownDirective {
-    /***************method 1 ***************/
+  /***************method 1 ***************/
     // @HostListener('click') onclick() {
     //     const classList = this.elemRef.nativeElement.classList;
     //     if(classList.contains('open')) {
@@ -17,7 +17,8 @@ export class DropdownDirective {
 
     /***************method 2 ***************/
     @HostBinding('class.open') isOpen: boolean = false;
-    @HostListener('click') toggle() {
-        this.isOpen = !this.isOpen;
-    }
+
+  @HostListener('click') toggleOpen() {
+    this.isOpen = !this.isOpen;
+  }
 }
